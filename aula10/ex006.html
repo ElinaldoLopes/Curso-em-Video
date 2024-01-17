@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex006</title>
+    <style>
+        div#area {
+            font: normal 20pt arial ;
+            background-color: rgb(255, 0, 242);
+            color: rgb(255, 255, 255);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onmouseenter="entrou()">
+        penis grandes
+    </div>
+
+    <script>        
+        function entrou() {
+            var a = document.getElementById("area")
+            a.addEventListener("click", clicar)
+            a.addEventListener("mouseout", sair)
+            a.innerText = "entrou"
+            a.style.background = "blue"
+                
+        
+        function clicar() {
+            a.innerText = "clicou"
+            a.style.background = "red"
+        }
+
+        function sair() {
+            a.innerText = "saiu"
+            a.style.background = "black"
+        }
+    }
+    </script>
+</body>
+</html>
