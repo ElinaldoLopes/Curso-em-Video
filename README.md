@@ -1,3 +1,3 @@
-# js cev
-aulas de JS do Guanabara
+# Curso em video
+aulas do Guanabara
  
