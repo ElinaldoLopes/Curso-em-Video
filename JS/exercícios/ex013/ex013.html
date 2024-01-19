@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>
+        body {
+            background-color: rgb(13, 15, 7);
+            font: normal 20pt arial;
+            text-align: center;
+            color: rgb(208, 218, 236);
+            
+        }
+        .hora {
+            padding: 5px;
+            height: 400px;
+            width: 600px;
+            background-color: rgb(173, 204, 233);
+            margin: auto;
+            font-size: 20pt;
+            color: rgb(43, 39, 39);
+            border-radius: 5%;
+        }
+        .imagem {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+        footer {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora do Dia</h1>
+    <div class="hora">
+        <p id="hora"></p>
+        <img class="imagem" id="imagem" src="" alt="">
+    </div>
+
+    <footer>&copy; Elinaldo Lopes</footer>
+
+    <script>
+        var agora = new Date()
+        var h = agora.getHours()
+        var m = agora.getMinutes()
+        var htxt = window.document.getElementById("hora")
+        var foto = window.document.getElementById("imagem")
+        if (h < 12) {
+            foto.src = "Manha.jpg"
+            document.body.style.background = "white"
+            document.body.style.color = "black"
+        } else if (h < 18) {
+            foto.src = "tarde.jpg"
+            document.body.style.background = "orange"
+            document.body.style.color = "black"
+        } else {
+            foto.src = "noite.jpg"
+        }
+        htxt.innerText = `Agora são ${h} horas e ${m} minutos.`
+    </script>
+</body>
+</html>
