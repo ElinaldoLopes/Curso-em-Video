@@ -1,5 +1,6 @@
 body {
     background-color: rgb(74, 157, 255);
+    font: normal 15pt arial;
 }
 header {
     color: white;
@@ -14,10 +15,25 @@ section {
     margin: auto;
     border-radius: 8px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.438);
+    text-align: center;
 }
 footer {
     font: normal 10pt arial;
     text-align: center;
     padding: 20px;
     color: white;
+}
+#res {
+    text-align: center;
+    padding: 5px;
+
+}
+.imagem {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.butao {
+    width: 200px;
+    height: 50px;
 }

@@ -13,10 +13,26 @@
 
     <body>
         <section>
+
             <div>
-                Ano de Nascimento
-                <input type="number" name="nasc" id="nasc"> <br>
+                <p> Ano de Nascimento
+                <input type="number" name="nasc" id="nasc"></p>
+
+                <p>Sexo:
+                    <input type="radio" name="sexo" id="m" checked>
+                    <label for="m">Masculino</label>
+                    <input type="radio" name="sexo" id="f">
+                    <label for="f">Feminino</label>
+                </p>
+
+                <p><input class="butao" type="button" value="Verificar" onclick="verificar()">
+                </p>               
             </div>
+
+            <div id="res">
+                <p>Preencha os dados para ver o resultado!</p>
+            </div>
+
         </section>
     </body>
 
