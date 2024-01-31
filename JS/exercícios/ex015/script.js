@@ -9,24 +9,47 @@ function contar() {
         res.innerHTML = "impossivel contar..."
 
 
-    } else if (Number(pa.value) == 0) {
-        alert("Passo invalido cosiderando passo 1")
-        var ni = Number(In.value)
-        res.innerHTML = "contando: <br>"
-        for (ni ; ni <= Number(fi.value) ; ni += 1) {
-        res.insertAdjacentText('beforeend', ` ${ni} ➡️`)
+    } else if (Number(In.value) > Number(fi.value)) {
+        if (Number(pa.value) == 0) {
+            alert("Passo invalido cosiderando passo 1")
+            var ni = Number(In.value)
+            res.innerHTML = "contando: <br>"
+            for (ni ; ni >= Number(fi.value) ; ni -= 1) {
+            res.insertAdjacentText('beforeend', ` ${ni} ➡️`)
+            }
+    
+    
+        } else {    
+            var ni = Number(In.value)
+            res.innerHTML = "contando: <br>"
+            for (ni ; ni >= Number(fi.value) ; ni -= Number(pa.value)) {
+            res.insertAdjacentText('beforeend', ` ${ni} ➡️`)
+            }
         }
-        res.insertAdjacentText('beforeend', `🚩`)
 
 
-    } else {    
-        var ni = Number(In.value)
-        res.innerHTML = "contando: <br>"
-        for (ni ; ni <= Number(fi.value) ; ni += Number(pa.value)) {
-        res.insertAdjacentText('beforeend', ` ${ni} ➡️`)
+    } else {
+        if (Number(pa.value) == 0) {
+            alert("Passo invalido cosiderando passo 1")
+            var ni = Number(In.value)
+            res.innerHTML = "contando: <br>"
+
+            for (ni ; ni <= Number(fi.value) ; ni += 1) {
+            res.insertAdjacentText('beforeend', ` ${ni} ➡️`)
+            }
+
+    
+    
+        } else {    
+            var ni = Number(In.value)
+            res.innerHTML = "contando: <br>"
+
+            for (ni ; ni <= Number(fi.value) ; ni += Number(pa.value)) {
+            res.insertAdjacentText('beforeend', ` ${ni} ➡️`)
+            }
+
         }
-        res.insertAdjacentText('beforeend', `🚩`)
+
     }
-    
-    
-}
+    res.insertAdjacentText('beforeend', `🚩`)
+    }
