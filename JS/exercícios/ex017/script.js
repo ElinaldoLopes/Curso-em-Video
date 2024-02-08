@@ -1,4 +1,5 @@
 var nums = []
+var ret = document.getElementById('ret')
 
 function maior(num = [0]) {
     for (i in num) {
@@ -24,10 +25,10 @@ function menor(num = [0]) {
     return me
 }
 
-function soma(n = [0]) {
+function soma(n = [0]) { 
     var s = 0
     for (i in n) {
-        var s = s + n[i]
+        s += n[i]
     }
     return s
 }
@@ -40,26 +41,45 @@ function Add() {
     if (num < 1 || num >100 || nums.includes(num) == true) {
         alert("[ERRO!] Núemro invalído ou já presente na lista, tente novamente")
     }    else{
+        
+        //limpando o ret
+        ret.innerHTML = ''
 
+        //pegando as variaveis
         var lista = document.getElementById("nums")
-        var res = document.createElement("option")
+        var opt = document.createElement("option")
+
         //limpado o select
         if (nums.length < 1) {
             lista.innerHTML = ''
         }
+
         //adicionando o número na lista
         nums.push(num)
+
         //adicionado o número no select
-        res.text = `Valor ${num} adicionado`
-        res.value = `Tab${nums.length}`
+        opt.text = `Valor ${num} adicionado`
+        opt.value = `Tab${nums.length}`
         lista.setAttribute('size', nums.length)
-        lista.appendChild(res)
+        lista.appendChild(opt)
     }
+
+    //apagar e selecionar o input
+    txtnum.value = ''
+    txtnum.focus()
 }
 
 function fin() {
-    //criando os praragrafos
-    var ret = document.getElementById('ret')
+
+    //limpando o ret
+    ret.innerHTML = ''
+
+    //validando o fin
+    if (nums.length == 0) {
+        alert('adicione valores antes de finalizar!')
+    } else {
+
+       //criando os praragrafos
     var tam = document.createElement('p')
     var mai = document.createElement('p')
     var men = document.createElement('p')
@@ -78,5 +98,6 @@ function fin() {
     ret.appendChild(mai)
     ret.appendChild(men)
     ret.appendChild(som)
-    ret.appendChild(med)
+    ret.appendChild(med) 
+    }
 }
